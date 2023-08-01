@@ -9,11 +9,11 @@ import java.time.Instant as JInstant
 
 @Converter
 class KotlinInstantConverter : AttributeConverter<KInstant, JInstant> {
-    override fun convertToDatabaseColumn(attribute: KInstant?): JInstant {
-        return attribute!!.toJavaInstant()
+    override fun convertToDatabaseColumn(attribute: KInstant?): JInstant? {
+        return attribute?.toJavaInstant()
     }
 
-    override fun convertToEntityAttribute(dbData: JInstant?): KInstant {
-        return dbData!!.toKotlinInstant()
+    override fun convertToEntityAttribute(dbData: JInstant?): KInstant? {
+        return dbData?.toKotlinInstant()
     }
 }
