@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "studio.hcmc"
-version = "1.0-SNAPSHOT"
+version = "0.0.5"
 
 repositories {
     mavenCentral()
@@ -19,7 +19,7 @@ publishing {
         create<MavenPublication>("maven") {
             groupId = "studio.hcmc"
             artifactId = "jpa-converter-extension"
-            version = "0.0.4"
+            version = "0.0.5"
             from(components["java"])
         }
     }
